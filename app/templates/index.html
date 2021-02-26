@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> <!--made a minor change here that is needed to display CSS with Flask-->
     <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
     <title>Greenhouse Website</title>
 </head>
@@ -92,7 +92,7 @@
                 <div class="grid-item">_</div>
                 <div class="grid-item">_</div>    
             </div>
-            <img src="img/filler_form.jpg" class = "form">
+            <img src="/static/img/filler_form.jpg" class = "form">  <!--- /static/ is needed to show images based on the structure-->
             <div class="grid-container">
                 <div class="grid-item">_</div>
                 <div class="grid-item">_</div>
