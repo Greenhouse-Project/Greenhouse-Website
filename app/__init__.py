@@ -1,13 +1,20 @@
-from flask import Flask
+from flask import Flask, app
 from flask_sqlalchemy import SQLAlchemy
 from flask import render_template # needed for displaying the HTML file
+from flask_migrate import Migrate # Used to transfer changes from Flask to MySQL
+
 
 # Local import
 from config import app_config
-# from app import views   # might not be needed
+
+# Using flask-login
+from flask_login import LoginManager
 
 # Database variable
 db =  SQLAlchemy()
+
+# Need to be after db variable initialization
+login_manager = LoginManager()
 
 def create_app(config_name):
     app = Flask(__name__, instance_relative_config=True)
@@ -40,6 +47,14 @@ def create_app(config_name):
     def About():
         return 'The About page is working'
     #     return render_template('TBD', title='About')
+    
+    login_manager.init_app(app)
+    login_manager.login_message = "You must be logged in to access this page."
+    login_manager.login_view = "auth.login"
+    
+    migrate = Migrate(app, db)
+    
+    from app import models
     
     
     return app
