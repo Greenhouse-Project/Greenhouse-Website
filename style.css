@@ -145,20 +145,34 @@ h3{
 }
 
 .front, .back{
-    background-color: #474747;
+    background-color: #465743;
 }
 
-.img-box-of-7{
+.front{
+    justify-content: center;
+}
+
+.img-box-of-2{
+    display: inline-flex;
+    margin-left: 7%;
+    /* flex-flow: column wrap;  */
+    align-items: center;
+    flex-direction:row;
+    justify-content: space-evenly;
+    padding-top: 0%;
+    padding-right: 20%;
+}
+
+.img-box-of-3{
     display: inline-flex;
     margin-left: 7%;
     flex-flow: column wrap; 
     align-items: center;
     flex-direction:row;
-    /* justify-content: space-evenly; */
+    justify-content: space-evenly;
     padding-top: 0%;
-    padding-right: 10%;
+    padding-right: 15%;
 }
-
 
 .beds{
     width: 25%;
@@ -167,33 +181,26 @@ h3{
 
 .form{
     width: 30%;
-    height: 30%;
+    height: -30%;
     float:right;
     margin-right: 7%;
-    padding-top:3%;
+    
     
 }
 
-.back{
-    background-color: #49e622;
-}
-
-
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 200px 200px;
-    background-color: #2196F3;
-    padding: 10px;
-    width: 25%;
-    height: 5%; 
-    padding-right: 20px;
-
+  .grid-container {
+    margin: 18px 30px;
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 5px; */
+    border:10px solid rgb(124, 71, 3);
+    grid-auto-rows: auto;
   }
+  
   .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8); */
-    /* padding: 20px; */
-    /* font-size: 30px;
-    text-align: center;
+    width: 150px;
+    height: 100px;
+    border: 2px ridge rgb(119, 74, 32);
+    background-image: url(img/bed-section.png);
+    background-size: 150px 100px;
   }
