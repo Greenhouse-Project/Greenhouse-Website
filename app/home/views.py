@@ -8,20 +8,23 @@ from . import home
 def Home():
     return render_template('index.html', title='Home')
     
-# # Front Room route
-# @home.route('/front-room')
-# def Front Room():
-#     return render_template('TBD', title='Front Room')
+# Front Room route
+@home.route('/front-room')
+def FrontRoom():
+    return 'The Front Room Page works'
+    # return render_template('TBD', title='Front Room')
     
-# # Back Room route
-# @home.route('/back-room')
-# def Back Room():
-#     return render_template('TBD', title='Back Room')
+# Back Room route
+@home.route('/back-room')
+def BackRoom():
+    return 'The Back Room Page works'
+    # return render_template('TBD', title='Back Room')
     
-# # Outside route
-# @home.route('/outside')
-# def Outside():
-#     return render_template('TBD', title='Outside')
+# Outside route
+@home.route('/outside')
+def Outside():
+    return 'The Outside Room Page works'
+    # return render_template('TBD', title='Outside')
     
 # About route
 @home.route('/about')

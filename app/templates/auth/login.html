@@ -1,8 +1,9 @@
-<!-- Basic html for login -->
-<!DOCTYPE html>
-<html lang="en">
-
-<body>
+<!-- Basic html for login using jinja2 -->
+{% import "bootstrap/utils.html" as utils %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block body %}
 <div class="content-section">
     <br />
     {{ utils.flashed_messages() }}
@@ -13,6 +14,4 @@
         {{ wtf.quick_form(form) }}
     </div>
 </div>
-</body>
-
-</html>
+{% endblock %}
